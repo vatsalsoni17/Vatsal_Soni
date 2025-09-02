@@ -29,6 +29,25 @@
         .nav-link-active {
             color: #3b82f6; /* Blue-500 */
         }
+        /* Styling for the timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid #374151; /* gray-700 */
+        }
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.56rem;
+            top: 0.25rem;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            background-color: #3b82f6; /* blue-500 */
+        }
     </style>
 </head>
 <body class="text-gray-300">
@@ -39,6 +58,7 @@
             <a href="#home" class="text-2xl font-bold text-white">Vatsal Soni</a>
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="#about" class="hover:text-blue-500 transition-colors duration-300 nav-link">About</a>
+                <a href="#experience" class="hover:text-blue-500 transition-colors duration-300 nav-link">Experience</a>
                 <a href="#skills" class="hover:text-blue-500 transition-colors duration-300 nav-link">Skills</a>
                 <a href="#projects" class="hover:text-blue-500 transition-colors duration-300 nav-link">Projects</a>
                 <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">Contact</a>
@@ -50,6 +70,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
             <a href="#about" class="block py-2 px-6 text-sm hover:bg-gray-800">About</a>
+            <a href="#experience" class="block py-2 px-6 text-sm hover:bg-gray-800">Experience</a>
             <a href="#skills" class="block py-2 px-6 text-sm hover:bg-gray-800">Skills</a>
             <a href="#projects" class="block py-2 px-6 text-sm hover:bg-gray-800">Projects</a>
             <a href="#contact" class="block py-2 px-6 text-sm hover:bg-gray-800">Contact</a>
@@ -81,7 +102,9 @@
                 <h2 class="text-3xl font-bold text-center text-white mb-12">About Me</h2>
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/3">
-                        <img src="https://placehold.co/400x400/3b82f6/ffffff?text=VS" alt="Vatsal Soni" class="rounded-full shadow-lg mx-auto">
+                        <!-- === YOUR PHOTO GOES HERE === -->
+                        <!-- IMPORTANT: Change 'profile.jpg' to the exact name of your uploaded photo -->
+                        <img src="assets/profile.jpg" alt="Vatsal Soni" class="rounded-full shadow-lg mx-auto w-64 h-64 object-cover">
                     </div>
                     <div class="md:w-2/3 text-lg text-left">
                         <p class="mb-4">
@@ -97,34 +120,81 @@
                 </div>
             </div>
         </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-white mb-16">Work Experience</h2>
+                <div class="max-w-3xl mx-auto">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <p class="font-semibold text-gray-400 text-sm mb-1">09/2024 - Present</p>
+                        <h3 class="text-xl font-bold text-white">Office Administrative Assistant [Data Analyst Role]</h3>
+                        <p class="text-blue-400 font-medium mb-3">CHARUSAT University</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Gathered, cleaned, and organized data from various institutes to ensure accuracy.</li>
+                            <li>Developed data-driven strategies to improve university rankings.</li>
+                            <li>Created insightful dashboards using Power BI and Looker Studio for key stakeholders.</li>
+                            <li>Managed data and reports for NAAC inspections, ensuring compliance with standards.</li>
+                        </ul>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <p class="font-semibold text-gray-400 text-sm mb-1">06/2023 - 08/2024</p>
+                        <h3 class="text-xl font-bold text-white">Data Analyst</h3>
+                        <p class="text-blue-400 font-medium mb-3">Acorn Universal Consultancy LLP</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Spearheaded automation of daily business processes, increasing productivity.</li>
+                            <li>Implemented an efficient inventory management system for real-time visibility.</li>
+                            <li>Analyzed revenue reports and streamlined complex data for better decision-making.</li>
+                            <li>Developed a sales potential project to forecast future sales and generate demand.</li>
+                        </ul>
+                    </div>
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <p class="font-semibold text-gray-400 text-sm mb-1">06/2022 - 08/2022</p>
+                        <h3 class="text-xl font-bold text-white">Intern</h3>
+                        <p class="text-blue-400 font-medium mb-3">Kaashi Consultancy</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                             <li>Analyzed problems and worked with teams to develop solutions.</li>
+                             <li>Completed research, compiled data, and produced timely reports.</li>
+                             <li>Sorted and organized files, spreadsheets, and reports.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- Skills Section -->
-        <section id="skills" class="py-20">
+        <section id="skills" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-white mb-12">My Skills</h2>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
                     <!-- Skills from CV -->
-                    <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
                         <img src="https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-icon.svg" class="h-16 mx-auto mb-4" alt="Power BI">
                         <h3 class="font-semibold text-lg">Power BI</h3>
                     </div>
-                    <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
                         <img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" class="h-16 mx-auto mb-4" alt="Tableau">
                         <h3 class="font-semibold text-lg">Tableau</h3>
                     </div>
-                    <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
                         <img src="https://www.vectorlogo.zone/logos/google_looker/google_looker-icon.svg" class="h-16 mx-auto mb-4" alt="Looker Studio">
                         <h3 class="font-semibold text-lg">Looker Studio</h3>
                     </div>
-                    <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
                         <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" class="h-16 mx-auto mb-4" alt="MySQL">
                         <h3 class="font-semibold text-lg">MySQL</h3>
                     </div>
-                    <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
                         <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" class="h-16 mx-auto mb-4" alt="Python">
                         <h3 class="font-semibold text-lg">Python</h3>
                     </div>
-                    <div class="bg-gray-900 p-6 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
                         <img src="https://www.vectorlogo.zone/logos/microsoft_excel/microsoft_excel-icon.svg" class="h-16 mx-auto mb-4" alt="Advanced Excel">
                         <h3 class="font-semibold text-lg">Advanced Excel</h3>
                     </div>
@@ -133,12 +203,12 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20 bg-gray-900">
+        <section id="projects" class="py-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center text-white mb-12">My Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1 -->
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
                         <img src="https://placehold.co/600x400/1f2937/ffffff?text=Sales+Forecasting" alt="Sales Potential Project" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Sales Potential & Forecasting</h3>
@@ -153,7 +223,7 @@
                         </div>
                     </div>
                     <!-- Project 2 -->
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
                         <img src="https://placehold.co/600x400/1f2937/ffffff?text=Process+Automation" alt="Business Process Automation" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Business Process Automation</h3>
@@ -168,7 +238,7 @@
                         </div>
                     </div>
                     <!-- Project 3 -->
-                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
                         <img src="https://placehold.co/600x400/1f2937/ffffff?text=Digital+Marketing+Impact" alt="Digital Marketing Research" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Digital Marketing Impact Study</h3>
@@ -187,7 +257,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20">
+        <section id="contact" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold text-white mb-4">Get In Touch</h2>
                 <p class="text-lg mb-8 max-w-2xl mx-auto">
@@ -197,6 +267,7 @@
                     <a href="mailto:vatsalsoni908@gmail.com" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105">
                         vatsalsoni908@gmail.com
                     </a>
+                     <p class="text-lg text-white font-medium">/ &nbsp; +91-7698221021</p>
                 </div>
                 <div class="flex justify-center space-x-6 mt-10">
                     <a href="https://www.linkedin.com/in/vatsal-soni-02a7191a7" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition-colors duration-300"><i data-feather="linkedin" class="w-8 h-8"></i></a>
@@ -207,7 +278,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800">
+    <footer class="bg-gray-800 border-t border-gray-700">
         <div class="container mx-auto px-6 py-4 text-center text-gray-500">
             <p>&copy; 2024 Vatsal Soni. All Rights Reserved.</p>
         </div>
@@ -225,9 +296,12 @@
         });
 
         // Close mobile menu when a link is clicked
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
+        document.querySelectorAll('#mobile-menu a, .nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+                // Check if the mobile menu is open before trying to close it
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
             });
         });
 
@@ -269,5 +343,3 @@
     </script>
 </body>
 </html>
-
-
