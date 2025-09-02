@@ -3,118 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vatsal Soni - Portfolio</title>
+    <title>Vatsal Soni - Business & Data Analyst</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a; /* A slightly softer black */
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
         }
         .text-gradient {
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
+            background-image: linear-gradient(to right, #4f46e5, #7c3aed); /* Indigo to Purple */
         }
         .nav-link-active {
-            color: #3b82f6; /* Blue-500 */
+            color: #4f46e5; /* Indigo-600 */
         }
-        /* Styling for the timeline */
         .timeline-item {
             position: relative;
             padding-left: 2.5rem;
-            padding-bottom: 2rem;
-            border-left: 2px solid #374151; /* gray-700 */
+            padding-bottom: 2.5rem;
+            border-left: 2px solid #e2e8f0; /* slate-200 */
         }
         .timeline-item:last-child {
-            border-left: 2px solid transparent;
+            border-left-color: transparent;
+            padding-bottom: 0;
         }
         .timeline-dot {
             position: absolute;
-            left: -0.56rem;
-            top: 0.25rem;
-            height: 1rem;
-            width: 1rem;
+            left: -0.6rem;
+            top: 0.1rem;
+            height: 1.1rem;
+            width: 1.1rem;
             border-radius: 50%;
-            background-color: #3b82f6; /* blue-500 */
+            background-color: #4f46e5;
+            border: 3px solid #f8fafc;
+        }
+        .achievement-check {
+            color: #16a34a; /* green-600 */
         }
     </style>
 </head>
-<body class="text-gray-300">
+<body class="text-slate-700">
 
     <!-- Header -->
-    <header id="header" class="bg-black/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-white">Vatsal Soni</a>
+    <header id="header" class="bg-white/90 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-slate-900">Vatsal Soni</a>
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="#about" class="hover:text-blue-500 transition-colors duration-300 nav-link">About</a>
-                <a href="#experience" class="hover:text-blue-500 transition-colors duration-300 nav-link">Experience</a>
-                <a href="#skills" class="hover:text-blue-500 transition-colors duration-300 nav-link">Skills</a>
-                <a href="#projects" class="hover:text-blue-500 transition-colors duration-300 nav-link">Projects</a>
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">Contact</a>
+                <a href="#about" class="hover:text-indigo-600 transition-colors duration-300 nav-link font-medium">About</a>
+                <a href="#experience" class="hover:text-indigo-600 transition-colors duration-300 nav-link font-medium">Experience</a>
+                <a href="#skills" class="hover:text-indigo-600 transition-colors duration-300 nav-link font-medium">Skills</a>
+                <a href="#projects" class="hover:text-indigo-600 transition-colors duration-300 nav-link font-medium">Projects</a>
+                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105">Contact</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-white">
+            <button id="mobile-menu-button" class="md:hidden text-slate-800">
                 <i data-feather="menu"></i>
             </button>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#about" class="block py-2 px-6 text-sm hover:bg-gray-800">About</a>
-            <a href="#experience" class="block py-2 px-6 text-sm hover:bg-gray-800">Experience</a>
-            <a href="#skills" class="block py-2 px-6 text-sm hover:bg-gray-800">Skills</a>
-            <a href="#projects" class="block py-2 px-6 text-sm hover:bg-gray-800">Projects</a>
-            <a href="#contact" class="block py-2 px-6 text-sm hover:bg-gray-800">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#about" class="block py-2 px-6 text-sm hover:bg-slate-50">About</a>
+            <a href="#experience" class="block py-2 px-6 text-sm hover:bg-slate-50">Experience</a>
+            <a href="#skills" class="block py-2 px-6 text-sm hover:bg-slate-50">Skills</a>
+            <a href="#projects" class="block py-2 px-6 text-sm hover:bg-slate-50">Projects</a>
+            <a href="#contact" class="block py-2 px-6 text-sm hover:bg-slate-50">Contact</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 1)), url('https://placehold.co/1920x1080/0a0a0a/1f1f1f?text=.')">
-            <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+        <section id="home" class="min-h-screen flex items-center bg-slate-50">
+            <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-4">
                     Hi, I'm Vatsal Soni
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 bg-gradient-to-r from-blue-500 to-purple-500 text-gradient">
+                <p class="text-xl md:text-3xl font-semibold mb-8 text-gradient">
                     Business & Data Analyst
                 </p>
-                <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-10">
-                    I leverage data to uncover actionable insights, optimize operations, and drive organizational success through strategic decision-making.
+                <p class="max-w-3xl mx-auto text-lg text-slate-600 mb-10">
+                    Dedicated and results-driven professional leveraging data to uncover actionable insights, optimize operations, and drive organizational success.
                 </p>
-                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105">
+                <a href="#projects" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105 inline-block">
                     View My Work
                 </a>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-20 bg-gray-900">
+        <section id="about" class="py-24 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-white mb-12">About Me</h2>
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/3">
-                        <!-- === YOUR PHOTO GOES HERE === -->
-                        <!-- IMPORTANT: Change 'profile.jpg' to the exact name of your uploaded photo -->
-                        <img src="assets/Vatsal.jpg" alt="Vatsal Soni" class="rounded-full shadow-lg mx-auto w-64 h-64 object-cover">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    <div class="md:w-1/3" data-aos="fade-right">
+                        <img src="assets/Vatsal.jpg" alt="Vatsal Soni" class="rounded-lg shadow-2xl mx-auto w-80 h-80 object-cover">
                     </div>
-                    <div class="md:w-2/3 text-lg text-left">
-                        <p class="mb-4">
-                           Hello! I'm Vatsal Soni, a dedicated and results-driven professional with expertise in data analysis and strategic decision-making. My journey began with a Mechanical Engineering degree and evolved into a passion for data, leading me to an MBA in Business Analytics.
+                    <div class="md:w-2/3 text-lg text-left" data-aos="fade-left">
+                        <h2 class="text-4xl font-bold text-slate-900 mb-6">About Me</h2>
+                        <p class="mb-4 text-slate-700">
+                           Hello! My journey began with a Mechanical Engineering degree and evolved into a passion for data, leading me to an MBA in Business Analytics. I specialize in transforming raw data into clear, actionable insights.
                         </p>
-                        <p class="mb-4">
-                           I specialize in transforming raw data into actionable insights. I'm proficient in creating impactful dashboards with tools like Power BI and Looker Studio, performing statistical analysis, and developing data-driven strategies to enhance efficiency and support leadership goals.
-                        </p>
-                        <p>
-                            From automating business processes to optimizing inventory and forecasting sales, I enjoy applying my analytical skills to solve real-world problems and drive growth.
+                        <p class="mb-4 text-slate-700">
+                           I am proficient in creating impactful dashboards with tools like Power BI and Looker Studio, performing statistical analysis, and developing data-driven strategies to enhance efficiency and support leadership goals. From automating business processes to forecasting sales, I enjoy applying my analytical skills to solve real-world problems and drive growth.
                         </p>
                     </div>
                 </div>
@@ -122,134 +126,111 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-white mb-16">Work Experience</h2>
-                <div class="max-w-3xl mx-auto">
+        <section id="experience" class="py-24 bg-slate-50">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-center text-slate-900 mb-16">Work Experience</h2>
+                <div class="max-w-4xl mx-auto">
                     <!-- Timeline Item 1 -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <p class="font-semibold text-gray-400 text-sm mb-1">09/2024 - Present</p>
-                        <h3 class="text-xl font-bold text-white">Office Administrative Assistant [Data Analyst Role]</h3>
-                        <p class="text-blue-400 font-medium mb-3">CHARUSAT University</p>
-                        <ul class="list-disc list-inside text-gray-400 space-y-2">
-                            <li>Gathered, cleaned, and organized data from various institutes to ensure accuracy.</li>
-                            <li>Developed data-driven strategies to improve university rankings.</li>
-                            <li>Created insightful dashboards using Power BI and Looker Studio for key stakeholders.</li>
-                            <li>Managed data and reports for NAAC inspections, ensuring compliance with standards.</li>
+                        <p class="font-semibold text-slate-500 text-sm mb-1">09/2024 - Present</p>
+                        <h3 class="text-2xl font-bold text-slate-900">Data Analyst Role</h3>
+                        <p class="text-indigo-600 font-medium mb-4">Internal Quality Assurance Cell, CHARUSAT University</p>
+                        <ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
+                            <li>Gathering, cleaning, and organizing institutional data to ensure accuracy and consistency.</li>
+                            <li>Creating insightful dashboards (Power BI, Looker Studio) for key stakeholders.</li>
+                            <li>Developing data-driven strategies to improve university rankings.</li>
+                            <li>Managing data and reports for NAAC inspections to ensure compliance.</li>
                         </ul>
+                        <p class="font-semibold text-slate-800 flex items-center"><i data-feather="check-circle" class="w-5 h-5 mr-2 achievement-check"></i>Developed an interactive quiz HTML webpage for IQAC events.</p>
                     </div>
                     <!-- Timeline Item 2 -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <p class="font-semibold text-gray-400 text-sm mb-1">06/2023 - 08/2024</p>
-                        <h3 class="text-xl font-bold text-white">Data Analyst</h3>
-                        <p class="text-blue-400 font-medium mb-3">Acorn Universal Consultancy LLP</p>
-                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <p class="font-semibold text-slate-500 text-sm mb-1">06/2023 - 08/2024</p>
+                        <h3 class="text-2xl font-bold text-slate-900">Data Analyst</h3>
+                        <p class="text-indigo-600 font-medium mb-4">Acorn Universal Consultancy LLP</p>
+                        <ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
                             <li>Spearheaded automation of daily business processes, increasing productivity.</li>
                             <li>Implemented an efficient inventory management system for real-time visibility.</li>
                             <li>Analyzed revenue reports and streamlined complex data for better decision-making.</li>
-                            <li>Developed a sales potential project to forecast future sales and generate demand.</li>
                         </ul>
-                    </div>
-                    <!-- Timeline Item 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <p class="font-semibold text-gray-400 text-sm mb-1">06/2022 - 08/2022</p>
-                        <h3 class="text-xl font-bold text-white">Intern</h3>
-                        <p class="text-blue-400 font-medium mb-3">Kaashi Consultancy</p>
-                        <ul class="list-disc list-inside text-gray-400 space-y-2">
-                             <li>Analyzed problems and worked with teams to develop solutions.</li>
-                             <li>Completed research, compiled data, and produced timely reports.</li>
-                             <li>Sorted and organized files, spreadsheets, and reports.</li>
-                        </ul>
+                         <p class="font-semibold text-slate-800 flex items-center"><i data-feather="check-circle" class="w-5 h-5 mr-2 achievement-check"></i>Pioneered a predictive sales potential project to stimulate demand.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-white mb-12">My Skills</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
-                    <!-- Skills from CV -->
-                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-                        <img src="https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-icon.svg" class="h-16 mx-auto mb-4" alt="Power BI">
-                        <h3 class="font-semibold text-lg">Power BI</h3>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-                        <img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" class="h-16 mx-auto mb-4" alt="Tableau">
-                        <h3 class="font-semibold text-lg">Tableau</h3>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-                        <img src="https://www.vectorlogo.zone/logos/google_looker/google_looker-icon.svg" class="h-16 mx-auto mb-4" alt="Looker Studio">
-                        <h3 class="font-semibold text-lg">Looker Studio</h3>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-                        <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" class="h-16 mx-auto mb-4" alt="MySQL">
-                        <h3 class="font-semibold text-lg">MySQL</h3>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-                        <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" class="h-16 mx-auto mb-4" alt="Python">
-                        <h3 class="font-semibold text-lg">Python</h3>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-                        <img src="https://www.vectorlogo.zone/logos/microsoft_excel/microsoft_excel-icon.svg" class="h-16 mx-auto mb-4" alt="Advanced Excel">
-                        <h3 class="font-semibold text-lg">Advanced Excel</h3>
-                    </div>
+        <!-- Skills & Expertise Section -->
+        <section id="skills" class="py-24 bg-white">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-center text-slate-900 mb-16">Skills & Expertise</h2>
+                
+                <h3 class="text-2xl font-bold text-center text-slate-800 mb-8">Technical Skills</h3>
+                <div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 text-center mb-16">
+                    <div class="p-4 transition-all duration-300 transform hover:scale-110"><img src="https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-icon.svg" class="h-16 mx-auto mb-3" alt="Power BI"><h4 class="font-semibold">Power BI</h4></div>
+                    <div class="p-4 transition-all duration-300 transform hover:scale-110"><img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" class="h-16 mx-auto mb-3" alt="Tableau"><h4 class="font-semibold">Tableau</h4></div>
+                    <div class="p-4 transition-all duration-300 transform hover:scale-110"><img src="https://www.vectorlogo.zone/logos/google_looker/google_looker-icon.svg" class="h-16 mx-auto mb-3" alt="Looker Studio"><h4 class="font-semibold">Looker Studio</h4></div>
+                    <div class="p-4 transition-all duration-300 transform hover:scale-110"><img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" class="h-16 mx-auto mb-3" alt="MySQL"><h4 class="font-semibold">MySQL</h4></div>
+                    <div class="p-4 transition-all duration-300 transform hover:scale-110"><img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" class="h-16 mx-auto mb-3" alt="Python"><h4 class="font-semibold">Python</h4></div>
+                    <div class="p-4 transition-all duration-300 transform hover:scale-110"><img src="https://www.vectorlogo.zone/logos/microsoft_excel/microsoft_excel-icon.svg" class="h-16 mx-auto mb-3" alt="Advanced Excel"><h4 class="font-semibold">Advanced Excel</h4></div>
+                    <div class="p-4 transition-all duration-300 transform hover:scale-110"><img src="https://www.vectorlogo.zone/logos/solidworks/solidworks-icon.svg" class="h-16 mx-auto mb-3" alt="SolidWorks"><h4 class="font-semibold">SolidWorks</h4></div>
+                    <div class="p-4 transition-all duration-300 transform hover:scale-110"><img src="https://www.vectorlogo.zone/logos/autodesk_autocad/autodesk_autocad-icon.svg" class="h-16 mx-auto mb-3" alt="AutoCAD"><h4 class="font-semibold">AutoCAD</h4></div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-center text-slate-800 mb-8">Professional Skills</h3>
+                <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-4">
+                    <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full">Business Process Automation</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full">Predictive Modeling</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full">Trend Data Analysis</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full">GAP Analysis</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full">Inventory Management</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full">Analytical Problem Solving</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strengths Section -->
+        <section id="strengths" class="py-24 bg-slate-50">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-center text-slate-900 mb-12">Core Strengths</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"><i data-feather="filter" class="w-12 h-12 text-indigo-600 mb-4"></i><h3 class="text-xl font-bold mb-2">Data Cleaning & Preparation</h3><p class="text-slate-600">Excel in transforming raw data into structured formats, ensuring integrity and quality for accurate analysis.</p></div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"><i data-feather="bar-chart-2" class="w-12 h-12 text-indigo-600 mb-4"></i><h3 class="text-xl font-bold mb-2">Exploratory Data Analysis</h3><p class="text-slate-600">Adept at visualizing data to uncover insights, identify trends, and spot key anomalies.</p></div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"><i data-feather="trending-up" class="w-12 h-12 text-indigo-600 mb-4"></i><h3 class="text-xl font-bold mb-2">Statistical Proficiency</h3><p class="text-slate-600">Strong foundation in statistical methods to interpret data, find correlations, and make informed decisions.</p></div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"><i data-feather="cpu" class="w-12 h-12 text-indigo-600 mb-4"></i><h3 class="text-xl font-bold mb-2">Predictive Modeling</h3><p class="text-slate-600">Skilled in using ML algorithms to develop predictive models that forecast outcomes and identify patterns.</p></div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-white mb-12">My Projects</h2>
+        <section id="projects" class="py-24 bg-white">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-center text-slate-900 mb-12">Projects & Research</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://placehold.co/600x400/1f2937/ffffff?text=Sales+Forecasting" alt="Sales Potential Project" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Sales Potential & Forecasting</h3>
-                            <p class="text-gray-400 mb-4">Developed a project to forecast future sales and generate demand through meticulous data analysis, simplifying complex data for better decision-making.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-blue-600/20 text-blue-300 text-xs font-semibold px-2.5 py-1 rounded-full">Predictive Modeling</span>
-                                <span class="bg-green-600/20 text-green-300 text-xs font-semibold px-2.5 py-1 rounded-full">Data Analysis</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-blue-500 hover:underline">View Details</a>
-                            </div>
+                    <div class="bg-slate-50 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300"><img src="https://placehold.co/600x400/e0e7ff/4338ca?text=Quiz+Webpage" alt="Quiz Webpage" class="w-full h-56 object-cover"><div class="p-6"><h3 class="text-xl font-bold text-slate-900 mb-2">Interactive Quiz Web Page</h3><p class="text-slate-600">Developed an engaging HTML webpage for a university quiz competition to enhance participant interaction.</p></div></div>
+                    <div class="bg-slate-50 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300"><img src="https://placehold.co/600x400/e0e7ff/4338ca?text=Sales+Forecasting" alt="Sales Potential Project" class="w-full h-56 object-cover"><div class="p-6"><h3 class="text-xl font-bold text-slate-900 mb-2">Sales Potential & Forecasting</h3><p class="text-slate-600">Pioneered a project to forecast future sales and generate demand through meticulous data analysis.</p></div></div>
+                    <div class="bg-slate-50 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300"><img src="https://placehold.co/600x400/e0e7ff/4338ca?text=Digital+Marketing" alt="Digital Marketing Research" class="w-full h-56 object-cover"><div class="p-6"><h3 class="text-xl font-bold text-slate-900 mb-2">Digital Marketing Impact Study</h3><p class="text-slate-600">Conducted research on the impact of digital marketing on consumer behaviour to model advertising effects.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Courses Section -->
+        <section id="education" class="py-24 bg-slate-50">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-4xl font-bold text-center text-slate-900 mb-12">Education</h2>
+                        <div class="space-y-8">
+                            <div class="bg-white p-8 rounded-lg shadow-md"><h3 class="text-xl font-bold text-slate-900">M.B.A. in Business Analytics</h3><p class="text-indigo-600 font-medium my-2">Charotar University of Science & Technology</p><p class="text-slate-600">GPA: 8.01 / 10.00</p></div>
+                            <div class="bg-white p-8 rounded-lg shadow-md"><h3 class="text-xl font-bold text-slate-900">B.E. in Mechanical Engineering</h3><p class="text-indigo-600 font-medium my-2">D. A. Degree Engineering & Technology</p><p class="text-slate-600">GPA: 8.63 / 10.00</p></div>
                         </div>
                     </div>
-                    <!-- Project 2 -->
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://placehold.co/600x400/1f2937/ffffff?text=Process+Automation" alt="Business Process Automation" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Business Process Automation</h3>
-                            <p class="text-gray-400 mb-4">Spearheaded the automation of daily business processes, resulting in significant time savings and increased productivity through enhanced efficiency and resource allocation.</p>
-                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-yellow-600/20 text-yellow-300 text-xs font-semibold px-2.5 py-1 rounded-full">Automation</span>
-                                <span class="bg-pink-600/20 text-pink-300 text-xs font-semibold px-2.5 py-1 rounded-full">Process Improvement</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                 <a href="#" class="text-blue-500 hover:underline">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 3 -->
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://placehold.co/600x400/1f2937/ffffff?text=Digital+Marketing+Impact" alt="Digital Marketing Research" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Digital Marketing Impact Study</h3>
-                            <p class="text-gray-400 mb-4">Conducted a research study on the impact of digital marketing on consumer behaviour, analyzing data to understand trends and model the effects of creative advertisements.</p>
-                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-purple-600/20 text-purple-300 text-xs font-semibold px-2.5 py-1 rounded-full">Research</span>
-                                <span class="bg-red-600/20 text-red-300 text-xs font-semibold px-2.5 py-1 rounded-full">Consumer Behaviour</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                 <a href="#" class="text-blue-500 hover:underline">View Details</a>
-                            </div>
+                     <div>
+                        <h2 class="text-4xl font-bold text-center text-slate-900 mb-12">Training & Courses</h2>
+                        <div class="space-y-8">
+                            <div class="bg-white p-8 rounded-lg shadow-md"><h3 class="text-xl font-bold text-slate-900">Applied AI</h3><p class="text-slate-600">Completed intensive training on practical applications of Artificial Intelligence.</p></div>
+                            <div class="bg-white p-8 rounded-lg shadow-md"><h3 class="text-xl font-bold text-slate-900">Power BI Workshop</h3><p class="text-slate-600">Focused training on data visualization and advanced dashboard creation with Power BI.</p></div>
                         </div>
                     </div>
                 </div>
@@ -257,33 +238,35 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-white mb-4">Get In Touch</h2>
-                <p class="text-lg mb-8 max-w-2xl mx-auto">
+        <section id="contact" class="py-24 bg-white">
+            <div class="container mx-auto px-6 text-center" data-aos="zoom-in">
+                <h2 class="text-4xl font-bold text-slate-900 mb-4">Get In Touch</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto text-slate-600">
                     I'm currently open to new opportunities and collaborations. Feel free to reach out if you have a project in mind or just want to connect!
                 </p>
-                <div id="contact-info" class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                    <a href="mailto:vatsalsoni908@gmail.com" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105">
-                        vatsalsoni908@gmail.com
-                    </a>
-                </div>
-                <div class="flex justify-center space-x-6 mt-10">
-                    <a href="https://www.linkedin.com/in/vatsal-soni-02a7191a7" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none"><i data-feather="linkedin" class="w-8 h-8"></i></a>
-                    <a href="#" aria-label="GitHub" class="text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none"><i data-feather="github" class="w-8 h-8"></i></a>
+                <div class="flex justify-center mt-10 space-x-6">
+                    <a href="mailto:vatsalsoni908@gmail.com" aria-label="Email" class="text-slate-500 hover:text-indigo-600 transition-colors duration-300"><i data-feather="mail" class="w-10 h-10"></i></a>
+                    <a href="https://www.linkedin.com/in/vatsal-soni-02a7191a7" target="_blank" aria-label="LinkedIn" class="text-slate-500 hover:text-indigo-600 transition-colors duration-300"><i data-feather="linkedin" class="w-10 h-10"></i></a>
+                    <a href="https://github.com/vatsalsoni17" target="_blank" aria-label="GitHub" class="text-slate-500 hover:text-indigo-600 transition-colors duration-300"><i data-feather="github" class="w-10 h-10"></i></a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700">
-        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
+    <footer class="bg-slate-100 border-t border-slate-200">
+        <div class="container mx-auto px-6 py-6 text-center text-slate-500">
             <p>&copy; 2024 Vatsal Soni. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
+        // AOS Initialization
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
         // Feather Icons Initialization
         feather.replace();
 
@@ -294,10 +277,8 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
         document.querySelectorAll('#mobile-menu a, .nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                // Check if the mobile menu is open before trying to close it
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                 }
@@ -308,16 +289,14 @@
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                header.classList.add('py-2');
-                header.classList.remove('py-4');
+                header.classList.add('shadow-lg');
             } else {
-                header.classList.add('py-4');
-                header.classList.remove('py-2');
+                header.classList.remove('shadow-lg');
             }
         });
         
         // Active navigation link highlighting on scroll
-        const sections = document.querySelectorAll('section');
+        const sections = document.querySelectorAll('main section');
         const navLinks = document.querySelectorAll('.nav-link');
 
         const observer = new IntersectionObserver((entries) => {
@@ -332,16 +311,13 @@
                 }
             });
         }, {
-            threshold: 0.5 // 50% of the section must be visible
+            threshold: 0.5
         });
 
         sections.forEach(section => {
             observer.observe(section);
         });
-
     </script>
 </body>
 </html>
-
-
 
